@@ -41,7 +41,7 @@ public class Kontrollstruktur_Datumsangabe {
 					{
 						if(((jahr % 4 == 0) && jahr % 100 != 0) || jahr % 400 == 0)
 						{
-							if(tag == 29)
+							if(tag <= 29)
 							{
 								System.out.println("datum korrekt : schaltjahr");
 							}
@@ -52,7 +52,7 @@ public class Kontrollstruktur_Datumsangabe {
 						}
 						else 
 						{
-							if(tag == 28)
+							if(tag <= 28)
 							{
 								System.out.println(" datum  korrekt : aber  kein schaltjahr");
 							}
