@@ -17,6 +17,9 @@ public class Kontrollstruktur_Primzahl {
 		int abs ;
 		
 		int maxAbs  = 0;
+
+		int recup = 0 ;
+		int  recup2 = 0;
 		
 		 
 		
@@ -59,7 +62,12 @@ public class Kontrollstruktur_Primzahl {
 				 maxAbs =  abs ;
 				
 			 }
-			
+
+			if(maxAbs == abs  && (tmp + tmp2) < n)
+			{
+				recup = tmp ;
+				recup2 = tmp2;
+			}
 			
 			 tmp2 = tmp ;
 			
