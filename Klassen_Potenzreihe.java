@@ -2,8 +2,12 @@ package prog2;
 
 public class Klassen_Potenzreihe {
 	
-	double x  = 0.9 ;                          // eingabe 
-	double eps ;
+	// ln(1 + x) =  x - (x^2 / 2) +  (x^3 /3 ) - (x^4 / 4 ) + (x^5 /5 )......
+	
+	 static double exponent  = 6;
+	 
+	
+			
 	 //static double result  = 0 ;
 	
 	
@@ -12,46 +16,65 @@ public class Klassen_Potenzreihe {
 	{
 		  double result = 0 ;
 		  
-		   double r1 = 1/2 ;
+		  double num  = 1 ;
+			 
+			 double denom = 1 ;
+			 
+			 int sign = -1 ;
+			double y ;
 		   
-		   double r2 =  1;
+		   
 	      if(x  > - 1 &&  x <= 1 )
 	      {
-	    	  for(int i = 1  ; i <= eps ; i++)
+	    	  for(int i = 1  ; i <= exponent ; i++)
 	    	  {
-	    		  if(i % 2 == 0)
+	    		 
+	    		 
+	    		  
+	    		  if(i % 2 !=0 )
 	    		  {
-	    			   if(i == 2 )
-	    			   {
-	    			  result = result - (r1 * x)   ;
-	    			   }
-	    			   else
-	    			   {
-	    				   result =  result - ((r1/2)*x);
-	    			   }
-	    			  
-	    		  }
-	    		  else
-	    		  {
+	    			 
 	    			  if(i == 1)
 	    			  {
-	    				  result = result + (r2 * x);
+	    				  y = x ;
+	    				  
+	    				  result  = result + (-sign)*(num/denom)* y;
 	    			  }
 	    			  else 
 	    			  {
-	    				  result =  result + (((r2/2)-1)* x);
+	    				   denom  =  denom + 1;
+	    				  result =  result + (-sign) *(num/denom)* x;
 	    			  }
 	    		  }
+	    		  else 
+	    		  {
+                         denom =  denom +1 ;
+	    			  
+	    			  result =  result + sign *(num/denom)* x ;
+	    		  }
+	    		  x *= x ;
 	    	  }
 	    	  
+	    	 //esult = result;
+	    	  
 	    	  System.out.println(result);
+	    
+	    	 
 	      }
+	     
 	      else
 	      {
 	    	  System.out.println("false Eingabe");
 	      }
+	   
+	  
 	      return result ;
-	}
+	}  
 	
+public static void main(String[] args) {
+		
+	//lassen_Potenzreihe p =  new Klassen_Potenzreihe();
+		 double end = ln1plusX(1, 0.00000001);
+	}
 
 }
