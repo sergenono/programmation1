@@ -18,15 +18,18 @@ int b ;
 
 void eingabe( std::vector<std::vector<double>>   &matrx1  , std::vector<std::vector<double>>  &matrx2);
 void mult( std::vector<std::vector<double>>   &matrx1  , std::vector<std::vector<double>>  &matrx2 , std::vector<std::vector<double>> &result);
+void ausgabe();
 
-int main() {
-	std::vector<std::vector<double>>  myMatrx1 ;
+std::vector<std::vector<double>>  myMatrx1 ;
 	std::vector<std::vector<double>> myMatrx2;
 	std::vector<std::vector<double>> res ;
 
-	eingabe(myMatrx1 , myMatrx2);
-	mult(myMatrx1 , myMatrx2 , res) ;
+int main() {
 
+
+	eingabe(myMatrx1 , myMatrx2);
+
+    ausgabe();
 
 	return 0;
 }
@@ -105,24 +108,7 @@ void eingabe(std::vector<std::vector<double>> &matrx1  , std::vector<std::vector
 		 		matrx2.push_back(vec);
 		 	}
 
-		 	for(int i = 0 ; i < n ; i++)
-		 	{
-		 		for(int j = 0 ; j< n ; j++)
-		 		{
-		 			std::cout<<matrx1[i][j] ;
-		 		}
 
-		 		std::cout<<"\n";
-		 	}
-		 	for(int i = 0 ; i < n ; i++)
-		 	{
-		 		for(int j = 0 ; j< n ; j++)
-		 		{
-		 			std::cout<<matrx2[i][j] ;
-		 		}
-
-		 		std::cout<<"\n";
-		 	}
 
 		     int laengeRows = matrx1[0].size();
 		      int laengeCols = matrx2[0].size();
@@ -159,8 +145,15 @@ void eingabe(std::vector<std::vector<double>> &matrx1  , std::vector<std::vector
 		     	 }
 		     	 std::cout<<"\n";
 		      }
+	 }
+
+		      void ausgabe()
+		      {
+
+		    	  mult(myMatrx1 , myMatrx2 , res) ;
+		      }
 		      //std::cout<< laengeRows ;
 
-	 }
+
 
 
