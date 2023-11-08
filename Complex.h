@@ -13,24 +13,22 @@ class Complex {
 private:
 	double realTeil ;
 	double imagTeil ;
-	double betrag ;
-	double winkel ;
+
 
 
 
 public:
 	Complex();
 	Complex(double rTeil , double imgTeil);
-	Complex(double bTrag , double wKel);
+
 	Complex(const Complex &z);
 	double getReal()const ;
 	double getImg() const ;
-	double  getWinkel() const ;
-	double getBetrag() const ;
+
 	void setReal(double r);
 	void setImg(double i);
-	void setBetrag( double b );
-	void setWinkel( double w) ;
+	double abs();
+	double phi();
 	Complex add1(  Complex  z1);
 	Complex sub(Complex z1 );
 	Complex div(Complex z1);
