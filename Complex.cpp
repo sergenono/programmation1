@@ -10,35 +10,27 @@
 #include<iostream>
 #include<algorithm>
 using namespace std ;
+#include<cmath>
 
 Complex::Complex() {
 	realTeil = 0;
 	imagTeil = 0 ;
- winkel = 0 ;
- betrag = 0 ;
+
       //  z  =  realTeil + "i"imagTeil
 }
 Complex::Complex(double rTeil , double imgTeil)
 {
 	realTeil =  rTeil ;
 	imagTeil = imgTeil ;
-	winkel = 0 ;
-	betrag = 0 ;
+
 }
 Complex::Complex(const Complex &other)
 {
 	realTeil = other.realTeil ;
 	imagTeil = other.imagTeil ;
-	winkel = other.winkel ;
-	betrag = other.betrag ;
+
 }
-Complex::Complex(double bTrag , double wKel)
-{
-	betrag = bTrag ;
-	winkel = wKel ;
-	realTeil = 0 ;
-	imagTeil = 0 ;
-}
+
 double Complex::getReal() const
 {
 	return realTeil ;
@@ -47,14 +39,7 @@ double Complex:: getImg()const
 {
 	 return imagTeil ;
 }
-double Complex::getWinkel()const
-{
-	return winkel ;
-}
-double Complex::getBetrag() const
-{
-	return betrag ;
-}
+
 void Complex:: setReal(double r)
 {
 	realTeil = r ;
@@ -87,6 +72,13 @@ Complex Complex::mult(Complex z1)
 
 	return result ;
 
+}double Complex:: abs()
+{
+	return  sqrt(realTeil*realTeil + imagTeil*imagTeil) ;
+}
+double Complex:: phi()
+{
+	return atan2(realTeil , imagTeil);
 }
 
 
@@ -109,14 +101,7 @@ Complex::~Complex() {
 	 betrag = Math.sqrt(((z1.realTeil)*(z1.realTeil)) + ((z1.imagTeil)*(z1.imagTeil)));
  }*/
 
-void Complex::setBetrag( double b )
-{
-        betrag = b ;
-}
-void Complex:: setWinkel( double w)
-{
-	winkel = w ;
-}
+
 int main()
 {
 
@@ -133,6 +118,9 @@ int main()
     r.print();
 	r2.print() ;
 	r3.print() ;
+
+
+	std::cout<<c1.abs() ;
 return 0 ;
 }
 
