@@ -7,6 +7,32 @@ public class ueb4blatt3 {
 		int tag =  Integer.parseInt(args [0]);
 		int monat =  Integer.parseInt(args [1]);
 		int jahr =  Integer.parseInt(args [2]);
+		int beideLetzteZahlVonJahr;
+		int beideErsteZahlVonJahr =0;
+		
+		if(monat >= 3 || monat <= 12)
+		{
+		     beideLetzteZahlVonJahr = jahr%100 ;
+		}
+		else 
+		{
+			beideLetzteZahlVonJahr = (jahr %1000) -1 ;
+			if(jahr == 1) {
+				beideErsteZahlVonJahr = 13 ;
+			}
+			else if(jahr == 2)
+			{
+				beideErsteZahlVonJahr = 14 ;
+			}
+			else 
+			{
+				beideErsteZahlVonJahr= jahr /100 ;
+			}
+		}
+			
+		
+		
+		int h = ( tag + Math.abs(((monat +1)*13)/5) + beideLetzteZahlVonJahr + Math.abs(beideLetzteZahlVonJahr/ 4) + Math.abs(beideErsteZahlVonJahr /4) -(2*beideErsteZahlVonJahr))%7 ;
 		
 		if(jahr >= 1583   &&  jahr <= 9999)
 		{
@@ -20,8 +46,41 @@ public class ueb4blatt3 {
 					{
 						if(tag <= 31)
 						{
+							if(h == 1)
+							{
 							System.out.println("datum korrekt");
-							System.out.printf("%d %d %d%n",  tag , monat , jahr);
+							System.out.printf(" Sonnstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h == 2)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" montag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h == 3)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" dienstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h  == 4)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" mittwoch den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h == 5)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" donnerstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else  if(h == 6)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" freitag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else 
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" Samstag den , %d %d %d%n",  tag , monat , jahr);
+							}
 						
 						}
 						else 
@@ -33,8 +92,44 @@ public class ueb4blatt3 {
 					{
 						if(tag <= 30)
 						{
+							//System.out.println("datum korrekt");
+							//System.out.printf("%d %d %d%n",  tag , monat , jahr);
+							if(h == 1)
+							{
 							System.out.println("datum korrekt");
-							System.out.printf("%d %d %d%n",  tag , monat , jahr);
+							System.out.printf(" Sonnstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h == 2)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" montag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h == 3)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" dienstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h  == 4)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" mittwoch den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else if(h == 5)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" donnerstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else  if(h == 6)
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" freitag den , %d %d %d%n",  tag , monat , jahr);
+							}
+							else 
+							{
+								System.out.println("datum korrekt");
+								System.out.printf(" Samstag den , %d %d %d%n",  tag , monat , jahr);
+							}
+						
 						
 						}
 						else 
@@ -48,8 +143,44 @@ public class ueb4blatt3 {
 						{
 							if(tag <= 29)
 							{
+								//System.out.println("datum korrekt : schaltjahr");
+								//System.out.printf("%d %d %d%n",  tag , monat , jahr);
+								if(h == 1)
+								{
 								System.out.println("datum korrekt : schaltjahr");
-								System.out.printf("%d %d %d%n",  tag , monat , jahr);
+								System.out.printf(" Sonnstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h == 2)
+								{
+									System.out.println("datum korrekt : schaltjahr");
+									System.out.printf(" montag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h == 3)
+								{
+									System.out.println("datum korrekt : schaltjahr");
+									System.out.printf(" dienstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h  == 4)
+								{
+									System.out.println("datum korrekt : schaltjahr");
+									System.out.printf(" mittwoch den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h == 5)
+								{
+									System.out.println("datum korrekt : schaltjahr");
+									System.out.printf(" donnerstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else  if(h == 6)
+								{
+									System.out.println("datum korrekt : schaltjahr");
+									System.out.printf(" freitag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else 
+								{
+									System.out.println("datum korrekt : schaltjahr");
+									System.out.printf(" Samstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+							
 								
 							}
 							else
@@ -61,8 +192,44 @@ public class ueb4blatt3 {
 						{
 							if(tag <= 28)
 							{
-								System.out.println(" datum  korrekt : aber  kein schaltjahr");
-								System.out.printf("%d %d %d%n",  tag , monat , jahr);
+								//System.out.println(" datum  korrekt  : aber  kein schaltjahr");
+								//System.out.printf("%d %d %d%n",  tag , monat , jahr);
+								if(h == 1)
+								{
+								System.out.println("datum korrekt : aber  kein schaltjahr");
+								System.out.printf(" Sonnstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h == 2)
+								{
+									System.out.println("datum korrekt : aber  kein schaltjahr");
+									System.out.printf(" montag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h == 3)
+								{
+									System.out.println("datum korrekt : aber  kein schaltjahr");
+									System.out.printf(" dienstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h  == 4)
+								{
+									System.out.println("datum korrekt : aber  kein schaltjahr");
+									System.out.printf(" mittwoch den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else if(h == 5)
+								{
+									System.out.println("datum korrekt : aber  kein schaltjahr");
+									System.out.printf(" donnerstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else  if(h == 6)
+								{
+									System.out.println("datum korrekt : aber  kein schaltjahr");
+									System.out.printf(" freitag den , %d %d %d%n",  tag , monat , jahr);
+								}
+								else 
+								{
+									System.out.println("datum korrekt : aber  kein schaltjahr");
+									System.out.printf(" Samstag den , %d %d %d%n",  tag , monat , jahr);
+								}
+							
 							
 							}
 							else 
