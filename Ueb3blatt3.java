@@ -80,7 +80,10 @@ public class Ueb3blatt3 {
 			
 			System.out.println("aligned") ;
 		}
-		else if()
+		else if((px==tx && py==ty) || (qx == sx && qy ==sy) ||(s1x == q1x && s1y== q1y) || (t1x == p1x && t1y== p1y))
+		{
+			System.out.println("touching");
+		}
 		
 
 	}
