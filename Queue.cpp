@@ -11,8 +11,8 @@
 using namespace std ;
 Queue::Queue() {
 
-	 pDequeue = NULL ;
-	 pEnqueue = NULL ;
+	 pDequeue = nullptr ;
+	 pEnqueue = nullptr ;
 	 size = 0 ;
 
 
@@ -26,7 +26,7 @@ Queue::Queue(QueueItem other)
 {
 	pDequeue = std::make_unique<QueueItem>(other) ;
 	pEnqueue = new QueueItem[other] ;
-	size  = 0;
+      size = 0  ;
 }
 Queue::QueueItem::QueueItem()
 {
